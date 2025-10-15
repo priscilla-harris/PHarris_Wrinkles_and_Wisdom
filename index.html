@@ -1,0 +1,129 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wrinkles and Wisdom | FHU</title>
+
+        <link rel="stylesheet" href="styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Fustat:wght@200..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="images/logo.png"/>
+            </div>
+            <div class="title">
+                <h1>Wrinkles and Wisdom</h1>
+                <h2>FHU Edition</h2>
+            </div>
+            <div class="tutorial">
+                <button id="tutorialBtn"><img src="images/question-circle.png"/></button>
+            </div>
+        </header>
+
+        <main>
+            <div class="tutorial-overlay hidden">
+                <div class="tutorial-content round">
+                    <h2>How to Play</h2>
+                    <div>
+                        <p>1. Guess the professor's age by adjusting the slider or typing a number.</p>
+                        <p>2. Click 'Submit' to lock in your guess.</p>
+                        <p>3. You have five attempts to guess the professor's age.</p>
+                    </div>
+                    <button id="closeTutorial" class="round">Got it!</button>
+                </div>
+            </div>
+            <section class="submit-view round">
+                <div class="guess-professor-cont">
+                    <h2>Guess age for...</h2>
+                    <div class="image">
+                        <img id="professorImage-submit" class="round" src=""/>
+                    </div>
+                    <h1><span id="professorName-submit">Kenan Casey</span></h1>
+                    <p><span id="professorDepartment-submit"></span> / <span id="professorTitle-submit"></span></p>
+                </div>
+                <div class="input-cont">
+                    <div class="age-input">
+                        <input id="ageInput" min="20" max="100" value="60"/>
+                        <p>years</p>
+                    </div>
+                    <div class="slider-wrapper">
+                        <label for="ageSlider" class="min-label">20</label>
+                        <input type="range" id="ageSlider" min="20" max="100" value="60"/>
+                        <label for="ageSlider" class="max-label">100</label>
+                    </div>
+                    <div class="res-sub-buttons">
+                        <button id="reset" class="round">Reset</button>
+                        <button id="submit" class="round">Submit</button>
+                    </div>
+                </div>
+            </section>
+            <section class="results-view round hidden">
+                <div class="guess-professor-cont">
+                    <h2>Guess age for...</h2>
+                    <div class="image">
+                        <img id="professorImage-results" class="round" src=""/>
+                    </div>
+                    <h1><span id="professorName-results">Kenan Casey</span></h1>
+                    <p class="professor-details"><span id="professorDepartment-results"></span> / <span id="professorTitle-results"></span></p>
+                </div>
+                <div class="retry-cont">
+                    <h2><span id="resultsPrompt">Too old, but you're close!</span></h2>
+                    <p><span id="resultsPromptSub"></span></p>
+                    <div class="fail-x-cont">
+                        <img id="fail-x-1" class="fail-x" src="images/x.svg"/>
+                        <img id="fail-x-2" class="fail-x" src="images/x.svg"/>
+                        <img id="fail-x-3" class="fail-x" src="images/x.svg"/>
+                        <img id="fail-x-4" class="fail-x" src="images/x.svg"/>
+                        <img id="fail-x-5" class="fail-x" src="images/x.svg"/>
+                    </div>
+                    <button id="tryAgain" class="round">Try Again</button>
+                </div>
+            </section>
+            <section class="gamewin-view round hidden">
+                <div class="guess-professor-cont">
+                    <h2>Guess age for...</h2>
+                    <div class="image">
+                        <img id="professorImage-gamewin" class="round" src=""/>
+                    </div>
+                    <h1><span id="professorName-gamewin">Kenan Casey</span></h1>
+                    <p><span id="professorDepartment-gamewin"></span> / <span id="professorTitle-gamewin"></span></p>
+                </div>
+                <div class="gen-new-cont">
+                    <h2>You got it!</h2>
+                    <p><span id="nameResult-win"></span> is <span id="ageReveal-win"></span></p>
+                    <button id="playAgain-win" class="round">Play Again</button>
+                </div>
+            </section>
+            <section class="gamelose-view round hidden">
+                <div class="guess-professor-cont">
+                    <h2>Guess age for...</h2>
+                    <div class="image">
+                        <img id="professorImage-gamelose" class="round" src=""/>
+                    </div>
+                    <h1><span id="professorName-gamelose">Kenan Casey</span></h1>
+                    <p><span id="professorDepartment-gamelose"></span> / <span id="professorTitle-gamelose"></span></p>
+                </div>
+                <div id="playAgain-win" class="gen-new-cont">
+                    <h2>You lose.</h2>
+                    <p><span id="nameResult-lose"></span> is <span id="ageReveal-lose"></span></p>
+                    <div class="fail-x-cont-final">
+                        <img class="fail-x-final" src="images/x-maroon.svg"/>
+                        <img class="fail-x-final" src="images/x-maroon.svg"/>
+                        <img class="fail-x-final" src="images/x-maroon.svg"/>
+                        <img class="fail-x-final" src="images/x-maroon.svg"/>
+                        <img class="fail-x-final" src="images/x-maroon.svg"/>
+                    </div>
+                    <button id="playAgain-lose" class="round">Play Again</button>
+                </div>
+            </section>
+            <footer>
+                <p>Coded by Priscilla Harris</p>
+            </footer>
+        </main>    
+        <script type="module" src="main.js"></script>  
+    </body>
+</html>

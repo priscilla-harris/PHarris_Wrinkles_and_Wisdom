@@ -1,0 +1,420 @@
+:root {
+    --primary-maroon: rgb(86, 35, 44);
+  }
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/** Global Classes **/
+
+.hidden {
+    display: none;
+}
+
+.round {
+    border-radius: 1rem;
+}
+
+/**Selector**/
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+button {
+    padding: 0.75rem 2rem;
+    background-color: var(--primary-maroon);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-family: "Fustat", sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-maroon);
+    padding: 1rem;
+    color: white;
+}
+
+main {
+    background-image: url(images/background.png);
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--primary-maroon);
+    color: white;
+    box-shadow: 0 1rem 3rem #EBAA64;
+    padding: 2rem;
+    height: 70%;
+    width: 90%;
+    max-width: 48rem;
+}
+
+/**Specific Classes**/
+
+.title {
+    text-align: center;
+}
+
+.logo > img {
+    border-radius: 10rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+.tutorial > button > img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.image > img {
+    width: 17rem;
+    height: 17rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hamburger-menu {
+    width: 4rem;
+    height: 4rem;
+}
+
+.guess-professor-cont {
+    width: 50%;
+}
+
+.guess-professor-cont > h1 {
+    font-size: 2rem;
+}
+
+.input-cont, .retry-cont, .gen-new-cont {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    color: black;
+    border-radius: 1rem;
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 50%;
+    height: 15rem;
+}
+
+.input-cont p,  .retry-cont p, .gen-new-cont p, .input-cont p, .gen-new-cont p {
+    font-size: 1rem;
+}
+
+/**Input Customization**/
+
+/* Container styling */
+.input-cont {
+    justify-content: center;
+}
+
+.age-input {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.res-sub-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Label styling */
+
+.input-cont p {
+    color: var(--primary-maroon);
+}
+
+/* Range slider styling */
+input[type="range"] {
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 1rem;
+    background: var(--primary-maroon);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--primary-maroon);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Number input styling */
+#ageInput {
+    height: 6rem;
+    width: 9rem;
+    margin: 0rem 0.2rem;
+    border: none;
+    background: transparent;
+    font-size: 5rem;
+    border-radius: 1rem;
+    text-align: center;
+    outline: none;
+    color: var(--primary-maroon);
+    transition: border 0.1s ease-in;
+}
+
+#ageInput:hover {
+    border: 0.2rem solid var(--primary-maroon);
+}
+
+/** Guess Results Customization **/
+.retry-cont {
+    justify-content: space-around;
+}
+
+.fail-x-cont, .fail-x-cont-final {
+    display: flex;
+    justify-content: space-around;
+}
+
+.fail-x-cont > img, .fail-x-cont-final > img {
+    width: 2.25rem;
+}
+
+/**Game Over Results Customization **/
+.gen-new-cont {
+    display: flex;
+    justify-content: space-around;
+}
+
+/**Tutorial**/
+
+.tutorial-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .tutorial-content {
+    background-color: white;
+    padding: 2rem;
+    gap: 1rem;
+    text-align: center;
+    color: black;
+    width: 90%;
+    max-width: 40rem;
+  }
+
+  .tutorial-content > div {
+    text-align: left;
+  }
+
+  .tutorial-content > div > p {
+    margin: 1rem 0rem;
+    font-size: 1.5rem;
+  }
+  
+  .hidden {
+    display: none;
+  }  
+
+@media (max-width: 800px) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .title > h2 {
+        font-size: 1rem;
+    }
+
+    .logo > img {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .tutorial > button > img {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .image > img {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .fail-x-cont > img, .fail-x-cont-final > img {
+        width: 1.125rem;
+    }
+
+    section {
+        flex-direction: column;
+        width: 24rem;
+        height: 90%;
+        box-shadow: 0 1rem 3rem #ebaa6400;
+    }
+
+    .guess-professor-cont {
+        width: 100%;
+    }
+    
+    .guess-professor-cont > h1 {
+        font-size: 1.5rem;
+    }
+
+    .input-cont, .retry-cont, .gen-new-cont {
+        display: flex;
+        flex-direction: column;
+        background-color: #f5f5f5;
+        color: black;
+        border-radius: 1rem;
+        gap: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: 14rem;
+    }
+
+    #ageInput {
+        height: 3rem;
+        width: 5rem;
+        margin: 0rem 0.2rem;
+        border: none;
+        background: transparent;
+        font-size: 3rem;
+        font-weight: 600;
+        font-family: "Azeret Mono", monospace;
+        border-radius: 1rem;
+        text-align: center;
+        outline: none;
+        color: var(--primary-maroon);
+        transition: border 0.1s ease-in;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards; /* Adjust timing if needed */
+}
+
+.fade-in-delay {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.5s; /* Delays by 1 second */
+}
+
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.tutorial-overlay.fade-in {
+    animation: fadeInOverlay 0.5s ease forwards;
+}
+
+.tutorial-content.slide-up {
+    animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes quickFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-x {
+    opacity: 0;
+    animation: quickFadeIn 0.3s ease forwards;
+}
